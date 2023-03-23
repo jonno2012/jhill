@@ -18,7 +18,7 @@ class UserServiceTest extends TestCase
 
     public function testApiRespondsWithCorrectValues()
     {
-        $users = (new UserService(app(ClientInterface::class)))->getUsers();
+        $users = (app(UserService::class))->getUsers();
 
         $this->assertNotEmpty($users);
 

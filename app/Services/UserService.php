@@ -21,6 +21,7 @@ class UserService
 
         $users = $this->getUsers();
 
+        // in Laravel 8 onwards, you would use Factory > make > saveMany for this??
         foreach ($users as $user) {
             User::create($user);
         }
